@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Doses Radio & TV</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+        .video-container, .radio-container {
+            margin-bottom: 20px;
+        }
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .schedule {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .schedule th, .schedule td {
+            padding: 10px;
+            border: 1px solid white;
+        }
+        .schedule th {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>📻 Daily Doses Radio & 📺 TV Guide</h1>
+    
+    <!-- Radio Stream -->
+    <div class="radio-container">
+        <h2>🎵 Live Radio Stream</h2>
+        <iframe src="//myradiostream.com/embed/tgirl02" width="100%" height="150" frameborder="0"></iframe>
+    </div>
+
+    <!-- Video Player -->
+    <div class="video-container">
+        <h2>📺 Live TV Stream</h2>
+        <video controls>
+            <source src="YOUR-VIDEO-FILE.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- TV Guide Schedule -->
+    <h2>📅 TV Guide Schedule</h2>
+    <table class="schedule">
+        <tr>
+            <th>Time Slot</th>
+            <th>Program</th>
+        </tr>
+        <tr><td>12:00 AM - 2:00 AM</td><td>Midnight Jazz Hour: Smooth Classics</td></tr>
+        <tr><td>2:00 AM - 4:00 AM</td><td>Chillout Beats: Ambient & Downtempo</td></tr>
+        <tr><td>4:00 AM - 6:00 AM</td><td>Early Morning Acoustic: Soft Melodies</td></tr>
+        <tr><td>6:00 AM - 9:00 AM</td><td>Morning Pop Hits: Top Songs</td></tr>
+        <tr><td>9:00 AM - 12:00 PM</td><td>Classic Rock: 70s & 80s Hits</td></tr>
+        <tr><td>12:00 PM - 3:00 PM</td><td>Lunch Hour Hip-Hop Hits</td></tr>
+        <tr><td>3:00 PM - 7:00 PM</td><td>EDM Dance Party: Hits</td></tr>
+        <tr><td>7:00 PM - 10:00 PM</td><td>Evening Indie Hour: Indie & Alt</td></tr>
+        <tr><td>10:00 PM - 12:00 AM</td><td>Late Night Blues</td></tr>
+    </table>
+
+</body>
+</html>
