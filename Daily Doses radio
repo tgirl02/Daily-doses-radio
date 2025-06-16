@@ -41,7 +41,7 @@
     <h1>📻 Daily Doses Radio & 📺 TV Guide</h1>
     
     <!-- Radio Stream -->
-   <!--OnlineRadioBox Player widget-->
+  <!--OnlineRadioBox Player widget-->
 <div class="orbP" id="orb_player_79c7c6a97bc5ea97" vlm="0.8">
 <style media="screen">
     /* General */
@@ -107,10 +107,6 @@ s.src = "//ecdn.onlineradiobox.com/js/pwidget2.min.235ca64e.js";
 </script>
 </div>
 <!--OnlineRadioBox Player widget-->
-
-
-    <!-- TV Guide Schedule -->
-    <h2>📅 TV Guide Schedule</h2>
     <table class="schedule">
         <tr>
             <th>Time Slot</th>
