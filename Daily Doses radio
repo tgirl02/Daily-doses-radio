@@ -62,8 +62,8 @@
             <th>Time Slot</th>
             <th>Program</th>
         </tr>
-        <tr><td>12:00 AM - 2:00 AM</td><td>Midnight Jazz Hour: Smooth Classics</td></tr>
-        <tr><td>2:00 AM - 4:00 AM</td><td>Chillout Beats: Ambient & Downtempo</td></tr>
+        <tr><td>12:00 AM - 2:00 AM</td><td>Album</td></tr>
+        <tr><td>2:00 AM - 4:00 AM</td><td>Album</td></tr>
         <tr><td>4:00 AM - 6:00 AM</td><td>Early Morning Acoustic: Soft Melodies</td></tr>
         <tr><td>6:00 AM - 9:00 AM</td><td>Morning Pop Hits: Top Songs</td></tr>
         <tr><td>9:00 AM - 12:00 PM</td><td>Classic Rock: 70s & 80s Hits</td></tr>
