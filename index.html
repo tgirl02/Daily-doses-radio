@@ -40,5 +40,77 @@
 
     <h1>📻 Daily Doses Radio</h1>
     
- <a href="https://music.youtube.com/watch?v=zm96T-_2edI&si=sCd1u93rvSKfCxHi" target="_blank">Listen on YouTube Music</a>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Doses Radio</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+        .comment-section {
+            width: 80%;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #comments {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📻 Daily Doses Radio</h1>
+    <div class="container">
+        <a href="https://music.youtube.com/watch?v=zm96T-_2edI&si=sCd1u93rvSKfCxHi" target="_blank">Listen on YouTube Music</a>
+        
+        <!-- Comment Section -->
+        <div class="comment-section">
+            <h2>💬 Listener Comments</h2>
+            <textarea id="commentInput" placeholder="Type your comment..." rows="4"></textarea>
+            <button onclick="addComment()">Post Comment</button>
+            <div id="comments"></div>
+        </div>
+    </div>
+
+    <script>
+        function addComment() {
+            let input = document.getElementById("commentInput").value;
+            if (input.trim() !== "") {
+                let commentBox = document.createElement("p");
+                commentBox.textContent = input;
+                document.getElementById("comments").appendChild(commentBox);
+                document.getElementById("commentInput").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
+
 
