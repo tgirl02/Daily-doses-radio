@@ -1,159 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Doses Radio</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 80%;
-            margin: 30px auto;
-        }
-        .video-container, .radio-container {
-            margin-bottom: 20px;
-        }
-        .video-container video {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .schedule {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-        .schedule th, .schedule td {
-            padding: 10px;
-            border: 1px solid white;
-        }
-        .schedule th {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-    </style>
-</head>
-<body>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Radio Station</title>
+<!-- Optional: Add your custom CSS here -->
+    body {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
 
-    <h1>📻 Daily Doses Radio</h1>
-    
- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Doses Radio</title>
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 80%;
-            margin: 30px auto;
-        }
-        .comment-section {
-            width: 80%;
-            margin: 20px auto;
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-        }
-        textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-        }
-        button {
-            margin-top: 10px;
-            padding: 8px 12px;
-            background-color: white;
-            color: black;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        #comments {
-            margin-top: 15px;
-        }
-    </style>
+/* Header styling */
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Link styles */
+a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+a:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Container for the radio player */
+#radio-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Style for the radio station name */
+.radio-name {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Style for the play button */
+button {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1.2em;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+button:hover {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  transform: scale(1.05);
+}
+
+/* Playlist styling */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+li {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1em;
+  color: #ffe600;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
 </head>
 <body>
-    <h1>📻 Daily Doses Radio</h1>
-    <div class="container">
-        <a href="https://music.youtube.com/watch?v=zm96T-_2edI&si=sCd1u93rvSKfCxHi" target="_blank">Listen on YouTube Music</a>
-        https://www.itv.com/watch/whats-new-scooby-doo/2a4671/2a4671a0020 watch for free on itvx series 2 episode 6 only! it's free!
-        
-        <!-- Comment Section -->
-        <div class="comment-section">
-            <h2>💬 Listener Comments</h2>
-            <textarea id="commentInput" placeholder="Type your comment..." rows="4"></textarea>
-            <button onclick="addComment()">Post Comment</button>
-            <div id="comments"></div>
-        </div>
+<!-- OnlineRadioBox Player widget -->
+<div class="orbP" id="orb_player_12f03095be8aa52e" vlm="0.8">
+  <style media="screen">
+    /* Your custom styles for the player can go here or inline as needed */
+  </style>
+  <div class="orbPhc">
+    <a class="orbPh" href="https://onlineradiobox.com/uk/" title="Internet Radio" target="_blank">
+      <img src="//ecdn.onlineradiobox.com/img/wl.svg" alt="Internet Radio" />
+    </a>
+    <audio id="orb_player_12f03095be8aa52e_p" crossorigin="true" style="width:1px;height:1px;overflow:hidden;position:absolute;"></audio>
+    <button class="orbPp" title="Listen live" country="uk" alias="dailydoses" stream="1" autoplay="autoplay"></button>
+    <a class="orbPt" href="https://onlineradiobox.com/uk/dailydoses/" target="_blank">
+      <img class="orbPti" src="//cdn.onlineradiobox.com/img/l/9/144119.v28.png" alt="Daily Doses" />
+      <span class="orbPtn">Daily Doses</span>
+    </a>
+    <span class="orbPtt" loading="loading" playing="playing" error="playback error" not_supported="this browser can't play it" external="Listen now (Opens in popup player)" geo_blocked="Not available in your country"></span>
+    <div class="orbV">
+      <div class="orbVb"><i class="_m"></i></div>
+      <div class="orbVC"><div class="orbVCs" style="left: 80%;"></div></div>
     </div>
-
-    <script>
-        function addComment() {
-            let input = document.getElementById("commentInput").value;
-            if (input.trim() !== "") {
-                let commentBox = document.createElement("p");
-                commentBox.textContent = input;
-                document.getElementById("comments").appendChild(commentBox);
-                document.getElementById("commentInput").value = "";
-            }
-        }
-    </script>
+  </div>
+  <ul class="orbPpl"></ul>
+  <div class="orbF" style="display:none"></div>
+</div>
+<script>
+  var orbp_w = orbp_w || { lang: "en-us" };
+  orbp_w.cmd = orbp_w.cmd || [];
+  orbp_w.apiUrl = "https://onlineradiobox.com";
+  orbp_w.cmd.push(function() {
+    orbp_w.init("orb_player_12f03095be8aa52e");
+  });
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.src = "//ecdn.onlineradiobox.com/js/pwidget2.min.235ca64e.js";
+  var t = document.getElementsByTagName('script')[0];
+  t.parentNode.insertBefore(s, t);
+</script>
+<!-- End of OnlineRadioBox Player widget -->
 </body>
 </html>
- next wizkid albums
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Doses Radio Schedule</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .schedule { width: 100%; border-collapse: collapse; }
-        .schedule th, .schedule td { border: 1px solid #ddd; padding: 10px; text-align: center; }
-        .schedule th { background-color: #ff6600; color: white; }
-    </style>
-</head>
-<body>
-    <h1>Daily Doses Radio Posting Schedule</h1>
-    <table class="schedule">
-        <tr>
-            <th>Time</th>
-            <th>Content</th>
-        </tr>
-        <tr>
-            <td>00:00 - 02:00</td>
-            <td>Show Highlights</td>
-        </tr>
-        <tr>
-            <td>02:00 - 04:00</td>
-            <td>Live Stream Teasers</td>
-        </tr>
-        <tr>
-            <td>04:00 - 06:00</td>
-            <td>Guest Interviews</td>
-        </tr>
-        <tr>
-            <td>06:00 - 08:00</td>
-            <td>Music Spotlight</td>
-        </tr>
-        <!-- Continue this structure for every 2-hour slot -->
-    </table>
-</body>
-</html>
-
 
