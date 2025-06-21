@@ -1,49 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>My Radio Station</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Doses Radio – Live Now</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    header {
+      background: #e91e63;
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .content {
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16/9;
+    }
+    .radio-player {
+      width: 100%;
+      max-width: 800px;
+    }
+  </style>
 </head>
 <body>
-<!-- OnlineRadioBox Player widget -->
-<div class="orbP" id="orb_player_12f03095be8aa52e" vlm="0.8">
-  <style media="screen">
-    /* Your custom styles for the player can go here or inline as needed */
-  </style>
-  <div class="orbPhc">
-    <a class="orbPh" href="https://onlineradiobox.com/uk/" title="Internet Radio" target="_blank">
-      <img src="//ecdn.onlineradiobox.com/img/wl.svg" alt="Internet Radio" />
-    </a>
-    <audio id="orb_player_12f03095be8aa52e_p" crossorigin="true" style="width:1px;height:1px;overflow:hidden;position:absolute;"></audio>
-    <button class="orbPp" title="Listen live" country="uk" alias="dailydoses" stream="1" autoplay="autoplay"></button>
-    <a class="orbPt" href="https://onlineradiobox.com/uk/dailydoses/" target="_blank">
-      <img class="orbPti" src="//cdn.onlineradiobox.com/img/l/9/144119.v28.png" alt="Daily Doses" />
-      <span class="orbPtn">Daily Doses</span>
-    </a>
-    <span class="orbPtt" loading="loading" playing="playing" error="playback error" not_supported="this browser can't play it" external="Listen now (Opens in popup player)" geo_blocked="Not available in your country"></span>
-    <div class="orbV">
-      <div class="orbVb"><i class="_m"></i></div>
-      <div class="orbVC"><div class="orbVCs" style="left: 80%;"></div></div>
+  <header>
+    🎙️ Daily Doses Radio – We're Live!
+  </header>
+  <div class="content">
+    <!-- Twitch Embed -->
+    <iframe
+      src="https://player.twitch.tv/?channel=lovelyhomie&parent=www.daily-doses.org"
+      allowfullscreen>
+    </iframe>
+
+    <!-- OnlineRadioBox Player widget (from your current site) -->
+    <div class="radio-player">
+      <!-- Existing widget HTML from your GitHub page -->
+      <!-- You can copy and paste that radio player code block here -->
     </div>
   </div>
-  <ul class="orbPpl"></ul>
-  <div class="orbF" style="display:none"></div>
-</div>
-<script>
-  var orbp_w = orbp_w || { lang: "en-us" };
-  orbp_w.cmd = orbp_w.cmd || [];
-  orbp_w.apiUrl = "https://onlineradiobox.com";
-  orbp_w.cmd.push(function() {
-    orbp_w.init("orb_player_12f03095be8aa52e");
-  });
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.src = "//ecdn.onlineradiobox.com/js/pwidget2.min.235ca64e.js";
-  var t = document.getElementsByTagName('script')[0];
-  t.parentNode.insertBefore(s, t);
-</script>
-<!-- End of OnlineRadioBox Player widget -->
+
+  <!-- AWeber Web Push Integration -->
+  <script async src="https://assets.aweber-static.com/aweberjs/aweber.js"></script>
+  <script>
+    var AWeber = window.AWeber || [];
+    AWeber.push(function() {
+      AWeber.WebPush.init(
+        'BOqvK8hL5Q2pCXg3whpMM6Do8kwkB7oY1NCAyCZhkuOkuEWSyuifo6t67PrFyrXjWW5pzGWKKx3_Ryca6q9es7I',
+        '7b5daab5-b495-43bb-8d3c-05eaf72b983a',
+        '5fa407f0-c793-4f81-a5d5-a5923524e054'
+      );
+    });
+  </script>
 </body>
 </html>
+
 
