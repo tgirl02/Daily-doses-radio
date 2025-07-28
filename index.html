@@ -99,35 +99,4 @@
         }
         document.getElementsByTagName('head')[0].appendChild(s);
 
-        function runQueue() {
-            mytuner_scripts["player-v1.js_queue"].forEach(function(func) {
-                func();
-            });
-        }
-        mytuner_scripts["player-v1.js_queue"].push(function(){mytuner_scripts["player-v1.js"]("w4jDuzxLRHEvw7jCokI3w5wrazfDglnDlcOxwrlG")});
-    } else {
-        let widget = document.getElementById("w4jDuzxLRHEvw7jCokI3w5wrazfDglnDlcOxwrlG");
-        if (widget && widget.dataset.requires_initialization === "true") {
-            if (mytuner_scripts["player-v1.js-imported"]) {
-                mytuner_scripts["player-v1.js"]("w4jDuzxLRHEvw7jCokI3w5wrazfDglnDlcOxwrlG");
-                widget.dataset.requires_initialization = "false";
-            } else {
-                mytuner_scripts["player-v1.js_queue"].push(function(){
-                    mytuner_scripts["player-v1.js"]("w4jDuzxLRHEvw7jCokI3w5wrazfDglnDlcOxwrlG");
-                    widget.dataset.requires_initialization = "false";
-                });
-            }
-        }
-    }</script><script>
-    var mytuner_scripts = mytuner_scripts || {};
-    if (mytuner_scripts["widget-player-v1.js-imported"] == undefined) {
-        mytuner_scripts["widget-player-v1.js-imported"] = false;
-        var s = document.createElement("script");
-        s.type = "text/javascript";
-        s.src = "https://mytuner-radio.com/static/js/widgets/widget-player-v1.js";
-        s.defer = true;
-        document.getElementsByTagName('head')[0].appendChild(s);
-    }</script></div>
-</script>
-
 <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ftracy.becker.98284%2Fvideos%2F1070043134761703%2F&width=1280" width="1280" height="720" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
