@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Send Screenshot Email</title>
+</head>
+<body>
+  <h2>🎬 Submit Your Screenshot via Email</h2>
+
+  <form onsubmit="sendEmail(); return false;">
+    <label for="username">Name:</label><br>
+    <input type="text" id="username" required><br><br>
+
+    <label for="label">Task Label (e.g. T1):</label><br>
+    <input type="text" id="label" required><br><br>
+
+    <label for="scenes">Selected Scenes:</label><br>
+    <textarea id="scenes" rows="4" placeholder="List your chosen scenes..." required></textarea><br><br>
+
+    <button type="submit">Send Email</button>
+  </form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beauty and the Beast – Scene Transcription</title>
+  <style>
+    body {
+      background-color: #121212;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f0f0f0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #f9c74f;
+    }
+    .scene {
+      background-color: #1f1f1f;
+      border-left: 6px solid #f9844a;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .scene-title {
+      font-size: 1.3em;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .timecode {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+    .dialogue {
+      white-space: pre-wrap;
+    }
+    .character {
+      font-weight: bold;
+      color: #90e0ef;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📼 Transcription Log</h1>
+  <h2>Beauty and the Beast (1991)</h2>
+
+  <div class="scene">
+    <div class="scene-title">Scene 1: Prologue</div>
+    <div class="timecode">00:00:00 – 00:02:15</div>
+    <div class="dialogue">
+      <span class="character">NARRATOR:</span> Once upon a time, in a faraway land, a young prince lived in a shining castle...<br>
+      [The enchantress arrives, the prince refuses her gift, and is transformed into a beast.]<br>
+      <span class="character">NARRATOR:</span> Ashamed of his monstrous form, the Beast concealed himself inside his castle...
+    </div>
+  </div>
+
+  <div class="scene">
+    <div class="scene-title">Scene 2: Belle’s Morning</div>
+    <div class="timecode">00:02:16 – 00:05:30</div>
+    <div class="dialogue">
+      <span class="character">BELLE:</span> ♪ Little town, it’s a quiet village... ♪<br>
+      <span class="character">TOWNSFOLK:</span> Bonjour! Bonjour! Bonjour! Bonjour!<br>
+      <span class="character">BAKER:</span> Good morning, Belle!<br>
+      <span class="character">BELLE:</span> Morning, monsieur! I just finished the most wonderful story...
+    </div>
+  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beauty and the Beast – Transcription Portal</title>
+  <style>
+    body {
+      background-color: #121212;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f0f0f0;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #f9c74f;
+      margin-bottom: 10px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    form {
+      background-color: #1f1f1f;
+      padding: 30px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      background: #2c2c2c;
+      color: #fff;
+    }
+    textarea {
+      height: 150px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 20px;
+      background-color: #f9844a;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #f3722c;
+    }
+    .scene {
+      background-color: #1f1f1f;
+      border-left: 6px solid #f9844a;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+    .scene-title {
+      font-size: 1.3em;
+      color: #fff;
+    }
+    .timecode {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+    .dialogue {
+      white-space: pre-wrap;
+    }
+    .character {
+      font-weight: bold;
+      color: #90e0ef;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎬 Beauty and the Beast – Scene Transcription Hub</h1>
+
+  <!-- 📥 Submission Form -->
+  <section>
+    <h2>Submit a Scene</h2>
+    <form action="/submit-transcription" method="post">
+      <label for="sceneTitle">Scene Title</label>
+      <input type="text" id="sceneTitle" name="sceneTitle" placeholder="e.g. The Enchantress’s Curse" required> EXAMPLE
+
+      <label for="timecode">Timecode</label>
+      <input type="text" id="timecode" name="timecode" placeholder="e.g. 00:00:00 – 00:02:15" required> EXAMPLE NOT READY
+
+      <label for="transcript">Transcript</label>
+      <textarea id="transcript" name="transcript" placeholder="Type the full transcription for this scene..." required></textarea>
+
+      <button type="submit">Submit Scene</button> EXAMPLE
+    </form>
+  </section>
+
+  <!-- 📖 Scene Viewer -->
+  <section>
+    <h2>Sample Scene Viewer</h2>
+
+    <div class="scene">
+      <div class="scene-title">Scene 1: Prologue</div>
+      <div class="timecode">00:00:00 – 00:02:15</div>
+      <div class="dialogue">
+        <span class="character">NARRATOR:</span> Once upon a time, in a faraway land, a young prince lived in a shining castle...<br>
+        <span class="character">NARRATOR:</span> Ashamed of his monstrous form, the Beast concealed himself inside his castle...
+      </div>
+    </div>
+
+    <div class="scene">
+      <div class="scene-title">Scene 2: Belle’s Morning</div>
+      <div class="timecode">00:02:16 – 00:05:30</div>
+      <div class="dialogue">
+        <span class="character">BELLE:</span> ♪ Little town, it’s a quiet village... ♪<br>
+        <span class="character">TOWNSFOLK:</span> Bonjour! Bonjour! Bonjour! Bonjour!<br>
+        <span class="character">BAKER:</span> Good morning, Belle!
+      </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
+
+  <!-- Add more scenes below as needed -->
+
+</body>
+</html>
+
+📩 Action Required: Survey Submission
+Please send a confirmation email to dailydosesnetwork299@gmail.com after completing your submission.
+• 	✅ Submit the form using the provided link.
+• 	📸 Then take a screenshot confirming the submission of both the main form and the additional survey form.
+• 	📤 Email the screenshot directly to dailydosesnetwork299@gmail.com.
+Completing these steps will make it easier and faster to qualify for rewards, and help you earn credits more efficiently
+
+🎬 Timeslot Confirmation – No Movie Selection Required
+Since there’s no need to choose a movie, please simply confirm your assigned timeslot by submitting the provided form.
+• 	✅ Complete the submission.
+• 	📸 Take a screenshot showing the confirmation of your timeslot.
+• 	📤 Email that screenshot
+This step ensures your reward qualification process moves smoothly and that credits are applied swiftly.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transcription Archive – Beauty and the Beast</title>
+  <style>
+    body {
+      background-color: #121212;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f0f0f0;
+      padding: 40px;
+    }
+    h1 {
+      color: #f9c74f;
+      margin-bottom: 30px;
+    }
+    .transcription-entry {
+      background-color: #1f1f1f;
+      border-left: 6px solid #f9844a;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+    .scene-title {
+      font-size: 1.3em;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .submitted-by {
+      font-size: 0.9em;
+      color: #bbb;
+      margin-bottom: 10px;
+    }
+    .timecode {
+      font-size: 0.9em;
+      color: #ccc;
+      margin-bottom: 12px;
+    }
+    .dialogue {
+      white-space: pre-wrap;
+      line-height: 1.5em;
+    }
+    .character {
+      font-weight: bold;
+      color: #90e0ef;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎬 Transcription History – Beauty and the Beast</h1>
+
+  <!-- Sample Entry -->
+  <div class="transcription-entry">
+    <div class="scene-title">Scene 1: Prologue</div>
+    <div class="submitted-by">Submitted by: Tracy</div>
+    <div class="timecode">00:00:00 – 00:02:15</div>
+    <div class="dialogue">
+      <span class="character">NARRATOR:</span> Once upon a time, in a faraway land, a young prince lived in a shining castle...<br>
+      <span class="character">NARRATOR:</span> Ashamed of his monstrous form, the Beast concealed himself inside his castle...
+    </div>
+  </div>
+
+  <!-- Add more entries below -->
+  <div class="transcription-entry">
+    <div class="scene-title">Scene 2: Belle’s Morning</div>
+    <div class="submitted-by">Submitted by: Tracy</div>
+    <div class="timecode">00:02:16 – 00:05:30</div>
+    <div class="dialogue">
+      <span class="character">BELLE:</span> ♪ Little town, it’s a quiet village... ♪<br>
+      <span class="character">TOWNSFOLK:</span> Bonjour! Bonjour! Bonjour! Bonjour!
+    </div>
+  </div>
+<form action="submit-form.php" method="POST" enctype="multipart/form-data">
+  <h2>📽️ Scene Selection Sign-Up</h2>
+
+  <label for="username">Name or Username:</label><br>
+  <input type="text" id="username" name="username" required><br><br>
+
+  <label for="email">Email Address:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label>Select your scenes (you'll get fake money 💸):</label><br>
+  <input type="checkbox" name="scenes[]" value="Scene A"> Scene A<br>
+  <input type="checkbox" name="scenes[]" value="Scene B"> Scene B<br>
+  <input type="checkbox" name="scenes[]" value="Scene C"> Scene C<br><br>
+
+  <label for="screenshot">Upload Screenshot of your selections:</label><br>
+  <input type="file" id="screenshot" name="screenshot" accept=".jpg,.png,.jpeg" required><br><br>
+
+  <label for="label">Label your task (e.g. T1):</label><br>
+  <input type="text" id="label" name="label" placeholder="T1" required><br><br>
+
+  <input type="checkbox" id="consent" name="consent" required>
+  <label for="consent">I agree to follow the steps on <a href="https://www.daily-doses.org" target="_blank">How to Watch</a></label><br><br>
+
+  <button type="submit"><a href=""C:\Users\bless\OneDrive\Documents\movies money\email.html"" target="_blank">send and receive fake money</a></label><br><br>
+💸</button>
+</form>
+</body>
+</html>
+    
+    }
+  </script>
+</body>
+</html>
