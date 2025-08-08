@@ -1,114 +1,25 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Send Screenshot Email</title>
-</head>
-<body>
-  <h2>🎬 Submit Your Screenshot via Email</h2>
-
-  <form onsubmit="sendEmail(); return false;">
-    <label for="username">Name:</label><br>
-    <input type="text" id="username" required><br><br>
-
-    <label for="label">Task Label (e.g. T1):</label><br>
-    <input type="text" id="label" required><br><br>
-
-    <label for="scenes">Selected Scenes:</label><br>
-    <textarea id="scenes" rows="4" placeholder="List your chosen scenes..." required></textarea><br><br>
-
-    <button type="submit">Send Email</button>
-  </form>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Beauty and the Beast – Scene Transcription</title>
+  <title>Lyrics Archive</title>
   <style>
     body {
-      background-color: #121212;
-      font-family: 'Segoe UI', sans-serif;
-      color: #f0f0f0;
-      padding: 40px;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      background: #eef;
+      padding: 20px;
     }
-    h1, h2 {
-      color: #f9c74f;
-    }
-    .scene {
-      background-color: #1f1f1f;
-      border-left: 6px solid #f9844a;
-      margin-bottom: 30px;
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
       padding: 20px;
       border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .scene-title {
-      font-size: 1.3em;
-      margin-bottom: 8px;
-      color: #fff;
-    }
-    .timecode {
-      font-size: 0.9em;
-      color: #ccc;
-      margin-bottom: 12px;
-    }
-    .dialogue {
-      white-space: pre-wrap;
-    }
-    .character {
-      font-weight: bold;
-      color: #90e0ef;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>📼 Transcription Log</h1>
-  <h2>Beauty and the Beast (1991)</h2>
-
-  <div class="scene">
-    <div class="scene-title">Scene 1: Prologue</div>
-    <div class="timecode">00:00:00 – 00:02:15</div>
-    <div class="dialogue">
-      <span class="character">NARRATOR:</span> Once upon a time, in a faraway land, a young prince lived in a shining castle...<br>
-      [The enchantress arrives, the prince refuses her gift, and is transformed into a beast.]<br>
-      <span class="character">NARRATOR:</span> Ashamed of his monstrous form, the Beast concealed himself inside his castle...
-    </div>
-  </div>
-
-  <div class="scene">
-    <div class="scene-title">Scene 2: Belle’s Morning</div>
-    <div class="timecode">00:02:16 – 00:05:30</div>
-    <div class="dialogue">
-      <span class="character">BELLE:</span> ♪ Little town, it’s a quiet village... ♪<br>
-      <span class="character">TOWNSFOLK:</span> Bonjour! Bonjour! Bonjour! Bonjour!<br>
-      <span class="character">BAKER:</span> Good morning, Belle!<br>
-      <span class="character">BELLE:</span> Morning, monsieur! I just finished the most wonderful story...
-    </div>
-  </div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Beauty and the Beast – Transcription Portal</title>
-  <style>
-    body {
-      background-color: #121212;
-      font-family: 'Segoe UI', sans-serif;
-      color: #f0f0f0;
-      padding: 40px;
-      line-height: 1.6;
-    }
-    h1, h2 {
-      color: #f9c74f;
-      margin-bottom: 10px;
-    }
-    section {
-      margin-bottom: 50px;
-    }
-    form {
-      background-color: #1f1f1f;
-      padding: 30px;
-      border-radius: 10px;
+    h2 {
+      text-align: center;
+      color: #333;
     }
     label {
       display: block;
@@ -119,344 +30,118 @@
     textarea {
       width: 100%;
       padding: 10px;
-      border-radius: 5px;
-      border: none;
-      background: #2c2c2c;
-      color: #fff;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
     textarea {
       height: 150px;
       resize: vertical;
     }
+    .timestamps {
+      display: flex;
+      gap: 10px;
+    }
+    .timestamps input {
+      flex: 1;
+    }
     button {
       margin-top: 20px;
-      background-color: #f9844a;
-      color: #fff;
-      padding: 12px 20px;
+      padding: 10px 15px;
+      background: #0077cc;
+      color: white;
       border: none;
-      border-radius: 6px;
-      font-size: 1em;
+      border-radius: 4px;
       cursor: pointer;
     }
     button:hover {
-      background-color: #f3722c;
+      background: #005fa3;
     }
-    .scene {
-      background-color: #1f1f1f;
-      border-left: 6px solid #f9844a;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 8px;
+    .search-section {
+      margin-top: 30px;
     }
-    .scene-title {
-      font-size: 1.3em;
-      color: #fff;
-    }
-    .timecode {
-      font-size: 0.9em;
-      color: #ccc;
-      margin-bottom: 12px;
-    }
-    .dialogue {
-      white-space: pre-wrap;
-    }
-    .character {
-      font-weight: bold;
-      color: #90e0ef;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>🎬 Beauty and the Beast – Scene Transcription Hub</h1>
-
-  <!-- 📥 Submission Form -->
-  <section>
-    <h2>Submit a Scene</h2>
-    <form action="/submit-transcription" method="post">
-      <label for="sceneTitle">Scene Title</label>
-      <input type="text" id="sceneTitle" name="sceneTitle" placeholder="e.g. The Enchantress’s Curse" required> EXAMPLE
-
-      <label for="timecode">Timecode</label>
-      <input type="text" id="timecode" name="timecode" placeholder="e.g. 00:00:00 – 00:02:15" required> EXAMPLE NOT READY
-
-      <label for="transcript">Transcript</label>
-      <textarea id="transcript" name="transcript" placeholder="Type the full transcription for this scene..." required></textarea>
-
-      <button type="submit">Submit Scene</button> EXAMPLE
-    </form>
-  </section>
-
-  <!-- 📖 Scene Viewer -->
-  <section>
-    <h2>Sample Scene Viewer</h2>
-
-    <div class="scene">
-      <div class="scene-title">Scene 1: Prologue</div>
-      <div class="timecode">00:00:00 – 00:02:15</div>
-      <div class="dialogue">
-        <span class="character">NARRATOR:</span> Once upon a time, in a faraway land, a young prince lived in a shining castle...<br>
-        <span class="character">NARRATOR:</span> Ashamed of his monstrous form, the Beast concealed himself inside his castle...
-      </div>
-    </div>
-
-    <div class="scene">
-      <div class="scene-title">Scene 2: Belle’s Morning</div>
-      <div class="timecode">00:02:16 – 00:05:30</div>
-      <div class="dialogue">
-        <span class="character">BELLE:</span> ♪ Little town, it’s a quiet village... ♪<br>
-        <span class="character">TOWNSFOLK:</span> Bonjour! Bonjour! Bonjour! Bonjour!<br>
-        <span class="character">BAKER:</span> Good morning, Belle!
-      </div>
-    </div>
-
-  </section>
-
-</body>
-</html>
-
-  <!-- Add more scenes below as needed -->
-
-</body>
-</html>
-
-📩 Action Required: Survey Submission
-Please send a confirmation email to dailydosesnetwork299@gmail.com after completing your submission.
-• 	✅ Submit the form using the provided link.
-• 	📸 Then take a screenshot confirming the submission of both the main form and the additional survey form.
-• 	📤 Email the screenshot directly to dailydosesnetwork299@gmail.com.
-Completing these steps will make it easier and faster to qualify for rewards, and help you earn credits more efficiently
-
-🎬 Timeslot Confirmation – No Movie Selection Required
-Since there’s no need to choose a movie, please simply confirm your assigned timeslot by submitting the provided form.
-• 	✅ Complete the submission.
-• 	📸 Take a screenshot showing the confirmation of your timeslot.
-• 	📤 Email that screenshot
-This step ensures your reward qualification process moves smoothly and that credits are applied swiftly.
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Transcription Archive – Beauty and the Beast</title>
-  <style>
-    body {
-      background-color: #121212;
-      font-family: 'Segoe UI', sans-serif;
-      color: #f0f0f0;
-      padding: 40px;
-    }
-    h1 {
-      color: #f9c74f;
-      margin-bottom: 30px;
-    }
-    .transcription-entry {
-      background-color: #1f1f1f;
-      border-left: 6px solid #f9844a;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 8px;
-    }
-    .scene-title {
-      font-size: 1.3em;
-      font-weight: bold;
-      color: #fff;
-      margin-bottom: 5px;
-    }
-    .submitted-by {
-      font-size: 0.9em;
-      color: #bbb;
-      margin-bottom: 10px;
-    }
-    .timecode {
-      font-size: 0.9em;
-      color: #ccc;
-      margin-bottom: 12px;
-    }
-    .dialogue {
-      white-space: pre-wrap;
-      line-height: 1.5em;
-    }
-    .character {
-      font-weight: bold;
-      color: #90e0ef;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>🎬 Transcription History – Beauty and the Beast</h1>
-
-  <!-- Sample Entry -->
-  <div class="transcription-entry">
-    <div class="scene-title">Scene 1: Prologue</div>
-    <div class="submitted-by">Submitted by: Tracy</div>
-    <div class="timecode">00:00:00 – 00:02:15</div>
-    <div class="dialogue">
-      <span class="character">NARRATOR:</span> Once upon a time, in a faraway land, a young prince lived in a shining castle...<br>
-      <span class="character">NARRATOR:</span> Ashamed of his monstrous form, the Beast concealed himself inside his castle...
-    </div>
-  </div>
-
-  <!-- Add more entries below -->
-  <div class="transcription-entry">
-    <div class="scene-title">Scene 2: Belle’s Morning</div>
-    <div class="submitted-by">Submitted by: Tracy</div>
-    <div class="timecode">00:02:16 – 00:05:30</div>
-    <div class="dialogue">
-      <span class="character">BELLE:</span> ♪ Little town, it’s a quiet village... ♪<br>
-      <span class="character">TOWNSFOLK:</span> Bonjour! Bonjour! Bonjour! Bonjour!
-    </div>
-  </div>
-<form action="submit-form.php" method="POST" enctype="multipart/form-data">
-  <h2>📽️ Scene Selection Sign-Up</h2>
-
-  <label for="username">Name or Username:</label><br>
-  <input type="text" id="username" name="username" required><br><br>
-
-  <label for="email">Email Address:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-
-  <label>Select your scenes (you'll get fake money 💸):</label><br>
-  <input type="checkbox" name="scenes[]" value="Scene A"> Scene A<br>
-  <input type="checkbox" name="scenes[]" value="Scene B"> Scene B<br>
-  <input type="checkbox" name="scenes[]" value="Scene C"> Scene C<br><br>
-
-  <label for="screenshot">Upload Screenshot of your selections:</label><br>
-  <input type="file" id="screenshot" name="screenshot" accept=".jpg,.png,.jpeg" required><br><br>
-
-  <label for="label">Label your task (e.g. T1):</label><br>
-  <input type="text" id="label" name="label" placeholder="T1" required><br><br>
-
-  <input type="checkbox" id="consent" name="consent" required>
-  <label for="consent">I agree to follow the steps on <a href="https://www.daily-doses.org" target="_blank">How to Watch</a></label><br><br>
-
-  <button type="submit"><a href=""C:\Users\bless\OneDrive\Documents\movies money\email.html"" target="_blank">send and receive fake money</a></label><br><br>
-💸</button>
-</form>
-</body>
-</html>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Daily Doses Survey Heroes</title>
-  <style>
-    body {
-      font-family: Verdana, sans-serif;
-      background: #181818;
-      color: #eee;
-      padding: 40px;
-      text-align: center;
-    }
-    h1 {
-      color: #f9c74f;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      max-width: 800px;
-      height: 400px;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
-  <h1>🎉 Listener Rewards Dashboard</h1>
-  <p>Thanks for supporting Daily Doses! Here’s who’s earning big 🎧💸</p>
-  
-  <!-- Embed published Google Sheet URL here -->
-please go to this
-https://www.nicesurveys.com/?page=dashboard  
-  <p style="margin-top: 20px; font-size: 0.9em;">Complete surveys to appear on this board. Let's make your voice heard!</p>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Survey Portal</title>
-  <script>
-    // Redirect after 5 minutes (300,000 milliseconds)
-    setTimeout(function() {
-      window.location.href = "thankyou.html"; // or your station page
-    }, 300000);
-  </script>
-</head>
-<body>
-interactive
-<iframe src="https://www.nicesurveys.com/?page=dashboard" width="100%" height="600px" style="border:none;"></iframe>
-<button onclick="window.location.href='thankyou.html'">I’ve Finished the Survey</button>
-
-Once you've completed a survey and received your reward, please return to this page click the "I've finished the survey" button and return to your movie/TV show task. That's how we confirm your payout!
-</body>
-</html>
-</body>
-</html>
-    }
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<img src="https://m.media-amazon.com/images/M/MV5BNTEyNjUwMTkxMV5BMl5BanBnXkFtZTcwNjk0NDk0NA@@._V1_FMjpg_UX1000_.jpg" alt="Legally Blonde Poster" width="300">
-<img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Legally_Blonde_2.jpg" 
-     alt="Legally Blonde 2 Poster" 
-     style="width:300px; border:0;">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Upload Your HTML File</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1e1e1e;
-      color: #f0f0f0;
-      padding: 20px;
-      text-align: center;
-    }
-    .form-container {
-      background-color: #2c2c2c;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 500px;
-      margin: auto;
-    }
-    input[type="file"] {
-      margin: 15px 0;
+    .results {
+      margin-top: 20px;
+      background: #f9f9f9;
       padding: 10px;
-      background-color: #121212;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
+      border-radius: 6px;
     }
-    input[type="submit"] {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #e91e63;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover {
-      background-color: #c2185b;
+    .result-item {
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h2>🎶 Lyrics Transcription Archive</h2>
+    <form id="lyricsForm">
+      <label for="title">Video Title</label>
+      <input type="text" id="title" required>
 
-  <h1>📤 Upload Your HTML File</h1>
-  <p>Select your `.html` file and submit it for review or quiz entry.</p>
+      <label for="artist">Artist Name</label>
+      <input type="text" id="artist" required>
 
-  <div class="form-container">
-    <form action="upload-handler.php" method="POST" enctype="multipart/form-data">
-      <input type="file" name="html_file" accept=".html" required>
-      <br>
-      <input type="submit" value="Upload File">
+      <label>Timestamps</label>
+      <div class="timestamps">
+        <input type="text" id="start" placeholder="Start (e.g. 00:01)">
+        <input type="text" id="end" placeholder="End (e.g. 03:45)">
+      </div>
+
+      <label for="lyrics">Lyrics</label>
+      <textarea id="lyrics" required></textarea>
+
+      <button type="submit">Save Transcription</button>
     </form>
+
+    <div class="search-section">
+      <h3>🔍 Search Archive</h3>
+      <input type="text" id="searchInput" placeholder="Search by title or artist">
+      <button onclick="searchLyrics()">Search</button>
+      <div class="results" id="results"></div>
+    </div>
   </div>
 
+  <script>
+    const form = document.getElementById('lyricsForm');
+    const resultsDiv = document.getElementById('results');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const transcription = {
+        title: document.getElementById('title').value,
+        artist: document.getElementById('artist').value,
+        start: document.getElementById('start').value,
+        end: document.getElementById('end').value,
+        lyrics: document.getElementById('lyrics').value
+      };
+
+      let archive = JSON.parse(localStorage.getItem('lyricsArchive')) || [];
+      archive.push(transcription);
+      localStorage.setItem('lyricsArchive', JSON.stringify(archive));
+      alert('Transcription saved!');
+      form.reset();
+    });
+
+    function searchLyrics() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const archive = JSON.parse(localStorage.getItem('lyricsArchive')) || [];
+      const results = archive.filter(item =>
+        item.title.toLowerCase().includes(query) ||
+        item.artist.toLowerCase().includes(query)
+      );
+
+      resultsDiv.innerHTML = results.length
+        ? results.map(item => `
+          <div class="result-item">
+            <strong>${item.title}</strong> by ${item.artist}<br>
+            <em>${item.start} - ${item.end}</em><br>
+            <pre>${item.lyrics}</pre>
+          </div>
+        `).join('')
+        : '<p>No results found.</p>';
+    }
+  </script>
 </body>
 </html>
