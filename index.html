@@ -3,66 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily Doses Radio – Live Now</title>
+  <title>Daily Doses Radio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #111;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      background: linear-gradient(135deg, #5B2C83, #9B59B6, #D2B4DE);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
     }
-    header {
-      background: #e91e63;
-      width: 100%;
-      padding: 1rem;
-      text-align: center;
-      font-size: 2rem;
-      font-weight: bold;
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
-    .content {
-      margin: 2rem auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
+    .radio-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
     }
-    iframe {
-      border: none;
-      width: 100%;
-      max-width: 800px;
-      aspect-ratio: 16/9;
+  </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Doses Radio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #5B2C83, #9B59B6, #D2B4DE);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
     }
-    .radio-player {
-      width: 100%;
-      max-width: 800px;
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    .radio-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    audio::-webkit-media-controls-panel {
+      background-color: #5B2C83;
     }
   </style>
 </head>
-<body>
-  <header>
-    🎙️ Daily Doses Radio – We're Live!
-  </header>
-  <div class="content">
-	 hey am online
-	  check my telegram for updates
-<!--player code begin-->
-<div id="svp_player2wt9btx1ss84" style="width:720px;height:810px;position:relative;">
+<body class="min-h-screen flex flex-col items-center justify-center text-white font-sans px-4 py-8">
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-extrabold tracking-wide drop-shadow-lg">🎧 Daily Doses Radio</h1>
+    <p class="text-lg mt-2 italic">Your daily dose of sound & soul</p>
+  </div>
 
-<!--player code begin-->
-<div id="svp_player2wt9btx1ss84" style="width:720px;height:810px;position:relative;">
-	
-</div>
-<script language="javascript" type="text/javascript" src="//play.streamingvideoprovider.com/js/dplayer.js"></script>
-<script language="javascript">
-<!--
-var vars = {clip_id:"2wt9btx1ss84",transparent:"true",pause:"1",repeat:"",bg_color:"#ffffff",fs_mode:"2",no_controls:"",start_img:"0",start_volume:"34",close_button:"",brand_new_window:"1",auto_hide:"1",stretch_video:"",player_align:"NONE",offset_x:"0",offset_y:"0",player_color_ratio:0.6,skinAlpha:"50",colorBase:"#250864",colorIcon:"#ffffff",colorHighlight:"#7f54f8",direct:"false",is_responsive:"true",viewers_limit:0,cc_position:"bottom",cc_positionOffset:70,cc_multiplier:0.03,cc_textColor:"#ffffff",cc_textOutlineColor:"#ffffff",cc_bkgColor:"#000000",cc_bkgAlpha:0.1,aspect_ratio:"16:9",play_button:"1",play_button_style:"pulsing",sleek_player:"1",auto_play:"0",auto_play_type:"unMute",floating_player:"none"};
-var svp_player = new SVPDynamicPlayer("svp_player2wt9btx1ss84", "", "100%", "100%", {use_div:"svp_player2wt9btx1ss84",skin:"3"}, vars);
-svp_player.execute();
-//-->
-</script>
-<noscript>Your browser does not support JavaScript! JavaScript is needed to display this video player!</noscript>
-<!--player code end-->
+  <div class="radio-card p-6 rounded-xl shadow-xl w-full max-w-md mb-6">
+    <h2 class="text-2xl font-semibold mb-6">Welcome to my station</h2>
+
+  <div class="radio-card p-4 rounded-xl shadow-lg w-full max-w-md text-center">
+    <h2 class="text-xl font-semibold mb-4">Now Playing</h2>
+    <audio controls class="w-full rounded-lg">
+      <source src="https://your-stream-url.com/stream.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p class="mt-2 text-sm italic">Streaming live from Daily Doses HQ</p>
+  </div>
+</body>
+</html>
+</head>
+<body class="min-h-screen flex items-center justify-center text-white font-sans">
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-extrabold tracking-wide drop-shadow-lg">🎧 Daily Doses Radio</h1>
+    <p class="text-lg mt-2 italic">Your daily dose of sound & soul</p>
+  </div>
+</html>
