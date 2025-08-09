@@ -1,50 +1,86 @@
-<div class="section" id="trivia">
-  <h2>🧠 Trivia Block</h2>
-  <p id="question">Which indie artist released the album "Punisher" in 2020?</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Doses Radio</title>
 
-  <div>
-    <button onclick="checkAnswer('A')">A. Mitski</button>
-    <button onclick="checkAnswer('B')">B. Phoebe Bridgers</button>
-    <button onclick="checkAnswer('C')">C. Clairo</button>
-    <button onclick="checkAnswer('D')">D. Lucy Dacus</button>
+  <!-- SEO Metadata -->
+  <meta name="description" content="Daily Doses Radio: Indie music, trivia, and storytelling. Tune in for themed playlists and interactive features.">
+  <meta name="keywords" content="radio, indie music, trivia, storytelling, Daily Doses">
+  <meta name="author" content="Tracy">
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="Daily Doses Radio">
+  <meta property="og:description" content="Interactive indie music and storytelling hub.">
+  <meta property="og:image" content="https://yourdomain.com/cover.jpg">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Daily Doses Radio">
+  <meta name="twitter:description" content="Tune in for themed playlists, trivia blocks, and more.">
+  <meta name="twitter:image" content="https://yourdomain.com/cover.jpg">
+
+  <!-- Styles -->
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      padding: 2rem;
+      background-color: #222;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .player {
+      margin: 2rem auto;
+    }
+    .section {
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 1rem;
+    }
+    footer {
+      padding: 1rem;
+      background-color: #222;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎧 Daily Doses Radio</h1>
+    <p>Indie music, trivia, and storytelling—streaming 24/7</p>
+  </header>
+
+  <div class="player">
+    <!-- Embedded Radio Player -->
+    <script src="//myradiostream.com/embed/tgirl02"></script>
   </div>
 
-  <p id="feedback" style="margin-top:1rem; font-weight:bold;"></p>
+  <div class="section">
+    <h2>🎶 Featured Playlist</h2>
+    <p>Coming soon: Embedded YouTube or Spotify playlists with searchable lyrics.</p>
+  </div>
 
-  <script>
-    function checkAnswer(choice) {
-      const correct = 'B';
-      const feedback = document.getElementById('feedback');
-      if (choice === correct) {
-        feedback.textContent = '✅ Correct! Phoebe Bridgers released "Punisher" in 2020.';
-        feedback.style.color = 'lightgreen';
-      } else {
-        feedback.textContent = '❌ Nope! Try again or check out our artist spotlight.';
-        feedback.style.color = 'salmon';
-      }
-    }
-  </script>
-</div>
-<div class="section" id="playlist">
-  <h2>🎶 Featured Playlist</h2>
-  <iframe width="100%" height="400" 
-    src="https://www.youtube.com/embed/videoseries?list=PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI" 
-    title="YouTube playlist" frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-</div>
-button {
-  background-color: #333;
-  color: #f5f5f5;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  margin: 0.5rem;
-  cursor: pointer;
-  font-size: 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-button:hover {
-  background-color: #555;
-}
+  <div class="section">
+    <h2>🧠 Trivia Block</h2>
+    <p>Test your music knowledge with interactive trivia—new questions daily!</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Daily Doses Radio | Curated by Tracy
+  </footer>
+
+</body>
+</html>
