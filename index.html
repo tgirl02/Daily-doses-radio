@@ -1,86 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daily Doses Radio</title>
-
-  <!-- SEO Metadata -->
-  <meta name="description" content="Daily Doses Radio: Indie music, trivia, and storytelling. Tune in for themed playlists and interactive features.">
-  <meta name="keywords" content="radio, indie music, trivia, storytelling, Daily Doses">
-  <meta name="author" content="Tracy">
-
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="Daily Doses Radio">
-  <meta property="og:description" content="Interactive indie music and storytelling hub.">
-  <meta property="og:image" content="https://yourdomain.com/cover.jpg">
-  <meta property="og:url" content="https://yourdomain.com">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Daily Doses Radio">
-  <meta name="twitter:description" content="Tune in for themed playlists, trivia blocks, and more.">
-  <meta name="twitter:image" content="https://yourdomain.com/cover.jpg">
-
-  <!-- Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+      background: linear-gradient(135deg, #5B2C83, #9B59B6, #D2B4DE);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
     }
-    header {
-      padding: 2rem;
-      background-color: #222;
+    @keyframes gradientShift {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
     }
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .radio-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
     }
-    .player {
-      margin: 2rem auto;
-    }
-    .section {
-      margin: 2rem auto;
-      max-width: 800px;
-      padding: 1rem;
-    }
-    footer {
-      padding: 1rem;
-      background-color: #222;
-      font-size: 0.9rem;
+    audio::-webkit-media-controls-panel {
+      background-color: #5B2C83;
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>🎧 Daily Doses Radio</h1>
-    <p>Indie music, trivia, and storytelling—streaming 24/7</p>
-  </header>
-
-  <div class="player">
-    <!-- Embedded Radio Player -->
-    <script src="//myradiostream.com/embed/tgirl02"></script>
+<body class="min-h-screen flex flex-col items-center justify-center text-white font-sans px-4 py-8">
+  <div class="text-center mb-8">
+    <h1 class="text-4xl font-extrabold tracking-wide drop-shadow-lg">🎧 Daily Doses Radio</h1>
+    <p class="text-lg mt-2 italic">Your daily dose of sound & soul</p>
   </div>
 
-  <div class="section">
-    <h2>🎶 Featured Playlist</h2>
-    <p>Coming soon: Embedded YouTube or Spotify playlists with searchable lyrics.</p>
+  <div class="radio-card p-6 rounded-xl shadow-xl w-full max-w-md mb-6">
+    <h2 class="text-2xl font-semibold mb-6">Welcome to my station</h2>
+ <div class="radio-card p-4 rounded-xl shadow-lg w-full max-w-md text-center">
+    <h2 class="text-xl font-semibold mb-4">Now Playing</h2>
+    <audio controls class="w-full rounded-lg">
+      <source src="https://your-stream-url.com/stream.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p class="mt-2 text-sm italic">Streaming live from Daily Doses HQ</p>
   </div>
-
-  <div class="section">
-    <h2>🧠 Trivia Block</h2>
-    <p>Test your music knowledge with interactive trivia—new questions daily!</p>
-  </div>
-
-  <footer>
-    &copy; 2025 Daily Doses Radio | Curated by Tracy
-  </footer>
-
 </body>
 </html>
