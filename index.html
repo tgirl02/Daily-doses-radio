@@ -1,81 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily Doses Radio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background: linear-gradient(135deg, #5B2C83, #9B59B6, #D2B4DE);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-    }
-    @keyframes gradientShift {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-    .radio-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-    }
-  </style>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daily Doses Radio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      background: linear-gradient(135deg, #5B2C83, #9B59B6, #D2B4DE);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-    }
-    @keyframes gradientShift {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-    .radio-card {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 2px solid rgba(255, 255, 255, 0.2);
-    }
-    audio::-webkit-media-controls-panel {
-      background-color: #5B2C83;
-    }
-  </style>
-</head>
-<body class="min-h-screen flex flex-col items-center justify-center text-white font-sans px-4 py-8">
-  <div class="text-center mb-8">
-    <h1 class="text-4xl font-extrabold tracking-wide drop-shadow-lg">🎧 Daily Doses Radio</h1>
-    <p class="text-lg mt-2 italic">Your daily dose of sound & soul</p>
+<div class="section" id="trivia">
+  <h2>🧠 Trivia Block</h2>
+  <p id="question">Which indie artist released the album "Punisher" in 2020?</p>
+
+  <div>
+    <button onclick="checkAnswer('A')">A. Mitski</button>
+    <button onclick="checkAnswer('B')">B. Phoebe Bridgers</button>
+    <button onclick="checkAnswer('C')">C. Clairo</button>
+    <button onclick="checkAnswer('D')">D. Lucy Dacus</button>
   </div>
 
-  <div class="radio-card p-6 rounded-xl shadow-xl w-full max-w-md mb-6">
-    <h2 class="text-2xl font-semibold mb-6">Welcome to my station</h2>
+  <p id="feedback" style="margin-top:1rem; font-weight:bold;"></p>
 
-  <div class="radio-card p-4 rounded-xl shadow-lg w-full max-w-md text-center">
-    <h2 class="text-xl font-semibold mb-4">Now Playing</h2>
-    <audio controls class="w-full rounded-lg">
-      <script src="//myradiostream.com/embed/tgirl02"></script>
-      <script src="http://scripts.myradiostream.com/s38/16422/song.js"></script>
-      <script src="http://scripts.myradiostream.com/s38/16422/status.js?online=Live&offline=Off Air&nosource=On Air Soon"></script>
-      Your browser does not support the audio element.
-    </audio>
-    <p class="mt-2 text-sm italic">Streaming live from Daily Doses HQ</p>
-  </div>
-</body>
-</html>
-</head>
-<body class="min-h-screen flex items-center justify-center text-white font-sans">
-  <div class="text-center mb-8">
-    <h1 class="text-4xl font-extrabold tracking-wide drop-shadow-lg">🎧 Daily Doses Radio</h1>
-    <p class="text-lg mt-2 italic">Your daily dose of sound & soul</p>
-  </div>
-</html>
-<script src="https://fpyf8.com/88/tag.min.js" data-zone="162254" async data-cfasync="false"></script>
+  <script>
+    function checkAnswer(choice) {
+      const correct = 'B';
+      const feedback = document.getElementById('feedback');
+      if (choice === correct) {
+        feedback.textContent = '✅ Correct! Phoebe Bridgers released "Punisher" in 2020.';
+        feedback.style.color = 'lightgreen';
+      } else {
+        feedback.textContent = '❌ Nope! Try again or check out our artist spotlight.';
+        feedback.style.color = 'salmon';
+      }
+    }
+  </script>
+</div>
+<div class="section" id="playlist">
+  <h2>🎶 Featured Playlist</h2>
+  <iframe width="100%" height="400" 
+    src="https://www.youtube.com/embed/videoseries?list=PLFgquLnL59alCl_2TQvOiD5Vgm1hCaGSI" 
+    title="YouTube playlist" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+button {
+  background-color: #333;
+  color: #f5f5f5;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #555;
+}
